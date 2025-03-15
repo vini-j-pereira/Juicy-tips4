@@ -44,6 +44,7 @@ html {
     background-color: #161616;
     position: relative;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 /* Efeito Background */
