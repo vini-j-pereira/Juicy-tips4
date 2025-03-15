@@ -243,6 +243,45 @@ html {
     }
 }
 
+@media (481px <= width <= 769px){
+
+    .container{
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        height: 100vh !important;
+        align-items: center;
+        justify-content: space-between;
+        background-position: center;
+    }
+
+    .imgLogo img{
+        margin-top: -2rem;
+        width: 26rem;
+        z-index: 999999;
+    }
+
+    .imgLogo{
+        gap: 1.6rem;
+    }
+
+    .imgLogo button{
+        width: 100%;
+    }
+
+    .text1, .text2{
+        width: 80%;
+    }
+
+    .text1 p, .text2 p{
+        font-size: 2.5rem;
+    }
+
+    .text2{
+        margin-bottom: 4rem;
+    }
+}
+
 @media ( 1397px <= width <= 1922px){
 
     .text1{
