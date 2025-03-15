@@ -245,6 +245,7 @@ html {
 
 .chamada p{
     font-size: 1.6rem;
+    font-weight: bold;
     color: var(--clr-white);
     font-family: "Rajdhani", sans-serif;
     line-height: 1.6;
