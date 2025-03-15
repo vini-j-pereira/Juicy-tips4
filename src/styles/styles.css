@@ -105,7 +105,7 @@ html {
     z-index: 999999;
 }
 
-.imgLogo button{
+#btnTelegram{
     width: 100%;
     border: none;
     background-color: var(--clr-dark-green);
@@ -122,7 +122,7 @@ html {
     font-family: "Rajdhani", sans-serif;
 }
 
-.imgLogo button:hover{
+#btnTelegram:hover{
     background-color: var(--clr-dark);
     color: var(--clr-light-green);
 }
@@ -199,13 +199,24 @@ html {
     background-color: var(--clr-text-shadow);
     padding: 2rem;
     border-radius: 2rem;
+    transition: .2s ease-in;
+}
+
+.box:hover{
+    transform: scale(1.012);
+    box-shadow: 0 0 10px var(--clr-light-green);
+}
+
+.box-icon{
+    display: flex;
+    align-items: center;
+    background-color: var(--clr-white);
+    border-radius: .8rem;
 }
 
 .box i{
     font-size: 3.2rem;
-    background-color: var(--clr-white);
     padding: 1.5rem;
-    border-radius: .8rem;
     color: var(--clr-text-shadow);
 }
 
@@ -221,8 +232,29 @@ html {
     color: var(--clr-white);
 }
 
+.chamada{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .chamada h2{
     margin-top: 1.5rem;
+}
+
+.chamada p{
+    font-size: 1.6rem;
+    color: var(--clr-white);
+    font-family: "Rajdhani", sans-serif;
+    line-height: 1.6;
+    padding: 1rem;
+    text-align: center;
+}
+
+.chamada > #btnTelegram{
+    width: 30%;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
 }
 
 @media (320px <= width <= 360px){
@@ -245,7 +277,7 @@ html {
         gap: 1.3rem;
     }
 
-    .imgLogo button{
+    #btnTelegram{
         width: 100%;
     }
 
@@ -259,6 +291,10 @@ html {
 
     .text2{
         margin-top: -2rem;
+    }
+
+    .chamada > #btnTelegram{
+        width: 80%;
     }
 }
 
@@ -283,7 +319,7 @@ html {
         gap: 1.3rem;
     }
 
-    .imgLogo button{
+    #btnTelegram{
         width: 100%;
     }
 
@@ -297,6 +333,10 @@ html {
 
     .text2{
         margin-bottom: 3rem;
+    }
+
+    .chamada > #btnTelegram{
+        width: 80%;
     }
 }
 
@@ -321,7 +361,7 @@ html {
         gap: 1.6rem;
     }
 
-    .imgLogo button{
+    #btnTelegram{
         width: 100%;
     }
 
@@ -335,6 +375,10 @@ html {
 
     .text2{
         margin-bottom: 4rem;
+    }
+
+    .chamada > #btnTelegram{
+        width: 80%;
     }
 }
 
