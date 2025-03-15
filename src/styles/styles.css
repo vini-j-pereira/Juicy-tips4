@@ -178,6 +178,7 @@ html {
     }
 
     .imgLogo img{
+        margin-top: -2rem;
         width: 18rem;
         z-index: 999999;
     }
@@ -197,6 +198,10 @@ html {
     .text1 p, .text2 p{
         font-size: 1.3rem;
     }
+
+    .text2{
+        margin-top: -2rem;
+    }
 }
 
 @media (361px <= width <= 480px){
@@ -211,6 +216,7 @@ html {
     }
 
     .imgLogo img{
+        margin-top: -2rem;
         width: 24rem;
         z-index: 999999;
     }
@@ -229,6 +235,10 @@ html {
 
     .text1 p, .text2 p{
         font-size: 2.2rem;
+    }
+
+    .text2{
+        margin-bottom: 3rem;
     }
 }
 
