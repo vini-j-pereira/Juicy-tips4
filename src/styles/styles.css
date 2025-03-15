@@ -13,12 +13,13 @@
 
     --clr-white: #fafafa;
     --clr-dark: #161616;
+    --clr-backgroud-dark: #1616161f;
     --clr-light-green: #a2ffbc;
     --clr-dark-green: #50cb73;
     --clr-dark-green-transp: #50cb73f3;
     --clr-shadow-green: #308348;
     --clr-text-shadow: #173b21;
-    --clr-text-shadow-box: #173b2183;
+    --clr-text-shadow-box: #173b21cb;
 
     --spacing: 0.25rem;
 }
@@ -30,18 +31,61 @@ html {
 @keyframes pulsar {
     0%, 100% {
       transform: scale(1);
-      box-shadow: 0 0 10px var(--clr-shadow-green);
+      box-shadow: 0 0 10px var(--clr-text-shadow-box);
     }
     50% {
       transform: scale(1.04);
-      box-shadow: 0 0 20px var(--clr-text-shadow);
+      box-shadow: 0 0 20px var(--clr-white);
     }
   }
+
+
+  body {
+    background-color: #161616;
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+}
+
+/* Efeito Background */
+.smoke {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(50, 203, 115, 0.3) 10%, rgba(23, 59, 33, 0.1) 60%);
+    opacity: 0.7;
+    animation: moveSmoke 8s infinite alternate ease-in-out;
+}
+
+.smoke:nth-child(2) {
+    animation: moveSmoke 12s infinite alternate ease-in-out;
+    opacity: 0.5;
+}
+
+
+.smoke:nth-child(3) {
+    animation: moveSmoke 16s infinite alternate ease-in-out;
+    opacity: 0.3;
+}
+
+@keyframes moveSmoke {
+    0% {
+        transform: translateY(0px) translateX(-10px) scale(1);
+    }
+    50% {
+        transform: translateY(-30px) translateX(20px) scale(1.1);
+    }
+    100% {
+        transform: translateY(-50px) translateX(-20px) scale(1.2);
+    }
+}
+
+/*Fim Efeito Background */
 
 .container{
     width: 100%;
     height: 100vh;
-    background-image: url(../assets/Home\ \(1\).png);
+    background-image: url(../assets/Home.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -59,6 +103,7 @@ html {
 
 .imgLogo img{
     width: 35rem;
+    z-index: 999999;
 }
 
 .imgLogo button{
@@ -66,8 +111,8 @@ html {
     border: none;
     background-color: var(--clr-dark-green);
     color: var(--clr-white);
-    padding: 18px;
-    border-radius: 48px;
+    padding: 1.8rem;
+    border-radius: 4.8rem;
     font-size: 2rem;
     cursor: pointer;
     transition: .2s ease-in;
@@ -85,6 +130,7 @@ html {
 .text1{
     width: 25%;
     padding: 3rem;
+    z-index: 9999999;
 }
 
 .text1 p{
@@ -94,6 +140,7 @@ html {
     padding: 2rem;
     text-align: start;
     color: var(--clr-white);
+    
 }
 
 .text2{
@@ -102,6 +149,7 @@ html {
     padding: 3rem;
     align-items: end;
     justify-content: end;
+    z-index: 9999999;
     
 }
 
@@ -115,5 +163,86 @@ html {
 }
 
 .text2 span{
-    color: var(--clr-dark);
+    color: var(--clr-light-green);
+}
+
+@media (320px <= width <= 360px){
+
+    .container{
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        height: 100vh !important;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .imgLogo img{
+        width: 18rem;
+        z-index: 999999;
+    }
+
+    .imgLogo button{
+        width: 100%;
+    }
+
+    .text1, .text2{
+        width: 90%;
+    }
+
+    .text1 p, .text2 p{
+        font-size: 1.3rem;
+    }
+}
+
+@media (361px <= width <= 480px){
+
+    .container{
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        height: 100vh !important;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .imgLogo img{
+        width: 28rem;
+        z-index: 999999;
+    }
+
+    .imgLogo button{
+        width: 90%;
+    }
+
+    .text1, .text2{
+        width: 90%;
+    }
+}
+
+@media ( 1397px <= width <= 1922px){
+
+    .text1{
+        width: 28%;
+    }
+
+    .text1 p{
+        font-size: 4rem;
+    }
+
+    .imgLogo img{
+        width: 45rem;
+        z-index: 999999;
+    }
+
+    .text2{
+        width: 28%;
+    }
+
+    .text2 p{
+        font-size: 4rem;
+        
+       
+    }
+
 }
